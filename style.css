@@ -1,0 +1,70 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: gold;
+}
+
+.form,
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+input,
+textarea,
+select {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+}
+
+button {
+  background: gold;
+  color: #000;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#lessonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lesson-card {
+  background: #1c1c1c;
+  padding: 10px;
+  border-left: 4px solid gold;
+  border-radius: 6px;
+}
+
+.lesson-actions {
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+a {
+  color: #4da6ff;
+  text-decoration: none;
+}

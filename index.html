@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Lessons App</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase compat version -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Life Lessons</h1>
+
+    <!-- ✅ LOGIN SECTION -->
+    <div id="loginContainer">
+      <h3>Login</h3>
+      <input id="loginEmail" type="email" placeholder="Email" />
+      <input id="loginPassword" type="password" placeholder="Password" />
+      <button id="loginBtn">Login</button>
+      <p id="loginError" style="color:red;"></p>
+    </div>
+
+    <!-- ✅ APP SECTION (hidden until login) -->
+    <div id="appContainer" style="display:none;">
+      <!-- Form -->
+      <div class="form">
+        <input id="title" placeholder="Title" />
+        <textarea id="content" placeholder="Content"></textarea>
+        <input id="category" placeholder="Category" />
+        <input id="tags" placeholder="Tags (comma separated)" />
+        <input id="url" placeholder="Reference URL (optional)" />
+        <button id="saveBtn">Save Lesson</button>
+        <button id="cancelBtn" style="display:none;">Cancel Edit</button>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="filter">
+        <input id="search" placeholder="Search lessons..." />
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+
+      <!-- Lessons List -->
+      <div id="lessonsList"></div>
+
+      <button id="logoutBtn" style="margin-top:15px;">Logout</button>
+    </div>
+  </div>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
