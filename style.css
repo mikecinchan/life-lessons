@@ -48,18 +48,37 @@ button {
 #lessonsList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px; /* a bit more space between cards */
 }
 
 .lesson-card {
   background: #1c1c1c;
-  padding: 10px;
+  padding: 14px 12px;
   border-left: 4px solid gold;
   border-radius: 6px;
 }
 
+/* Make text comfy to read + keep line breaks from the textarea */
+.lesson-card h3 {
+  margin: 0 0 8px;
+}
+
+.lesson-card p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  white-space: pre-wrap;      /* ← preserves your \n as visual line breaks */
+  word-break: break-word;     /* long words/URLs won't overflow */
+  letter-spacing: 0.2px;
+}
+
+.lesson-card small {
+  display: inline-block;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
 .lesson-actions {
-  margin-top: 5px;
+  margin-top: 6px;
   display: flex;
   gap: 10px;
 }
